@@ -46,3 +46,13 @@ build
 # Misc
 .temp
 .cache
+
+# Sensitive Firebase and Service Account Files
+quizone-e6f0c-28b06ea1f60d.json
+firebase-service-account.json
+*.firebaserc
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
