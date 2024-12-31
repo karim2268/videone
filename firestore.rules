@@ -1,0 +1,18 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Règles de sécurité pour les vidéos
+    match /firestore_videos/{videoId} {
+      // Autoriser la lecture pour tous les utilisateurs authentifiés
+      allow read: if request.auth != null;
+      
+      // Interdire toute écriture
+      allow write: if false;
+    }
+    
+    // Règles par défaut très restrictives
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
