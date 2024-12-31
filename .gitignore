@@ -19,16 +19,20 @@ dist-ssr
 .env.development.local
 .env.test.local
 .env.production.local
+*.env
 
 # Firebase
 *service-account*.json
 *.firebaserc
+firebase-service-account.json
 quizone-e6f0c-28b06ea1f60d.json
 
 # Sensitive Credentials
 *.pem
 *.key
 *.cert
+*.p12
+*credentials*
 
 # Editor directories and files
 .vscode/*
